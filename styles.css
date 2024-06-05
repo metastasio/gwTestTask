@@ -31,15 +31,19 @@ body {
 
 @layer header {
   .header {
-    padding: 8px 80px;
     max-height: 100px;
     max-width: 100%;
     box-shadow: 0 5px 15px var(--light-gray);
   }
 
-  .main_navigation ul {
+  .main_navigation {
+    padding: 8px 80px;
+
     max-width: 1920px;
     margin: 0 auto;
+  }
+  .main_navigation ul {
+    margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -96,23 +100,26 @@ main {
 @layer about {
   .about_wrapper {
     display: flex;
-    flex-flow: row nowrap;
-    gap: 30px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
   }
 
-  .about_wrapper img {
+  .about_img {
+    border: 1px solid red;
+    max-width: 60%;
+  }
+  .about_img img {
     height: auto;
-    /* max-width: 60%; */
-
-    width: 60%;
     object-fit: cover;
+    width: 100%;
+    max-height: 640px;
   }
 
   .about_rent {
+    padding-left: 30px;
+    max-width: 40%;
     max-height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
   }
 
   .about_rent_title {
@@ -155,6 +162,10 @@ main {
     padding: 0 0 50px 20px;
   }
 
+  .about_rent_details li + li {
+    padding-top: 14px;
+  }
+
   .about_rent_details li::marker {
     color: var(--accent);
     font-size: 16px;
@@ -185,6 +196,37 @@ main {
   }
 
   .rent_description_brands {
+    margin-bottom: 80px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .rent_description_brands_slider {
+    max-width: 55%;
+  }
+  .rent_description_brands_slider img {
+    max-width: 33%;
+    max-height: 152px;
+  }
+
+  .rent_description_brands_slider img + img {
+    padding-left: 46px;
+  }
+
+  .rent_description_brands_list {
+    max-width: 45%;
+    padding-left: 30px;
+  }
+
+  .rent_description_brands_list ul li + li {
+    padding-top: 14px;
+  }
+
+  .rent_description_brands_list ul li::marker {
+    color: var(--accent);
+    font-size: 16px;
+  }
+  /* .rent_description_brands {
     gap: 30px;
     margin-bottom: 80px;
     display: grid;
@@ -223,7 +265,7 @@ main {
   .rent_description_brands_list li::marker {
     color: var(--accent);
     font-size: 16px;
-  }
+  } */
 
   .rent_description_details dl {
     margin: 0;
@@ -286,10 +328,6 @@ main {
     flex-flow: row nowrap;
     justify-content: space-between;
     gap: 35px;
-    /* flex-basis: 70%; */
-    /* flex-basis: auto; */
-    /* text-align: left; */
-    /* margin-left: auto; */
     justify-content: space-between;
     max-height: 180px;
   }
@@ -309,22 +347,6 @@ main {
   .footer_links li + li {
     padding-top: 32px;
   }
-  /* footer nav {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-  }
-
-   {
-    display: flex;
-    flex-flow: column wrap;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    gap: 32px;
-    font-size: 16px;
-    min-width: 888px;
-  } */
 
   .footer_logo {
     width: 170px;
@@ -387,5 +409,6 @@ main {
   width: 1px;
 }
 
+/* 1390 footer gap 50*/
 @media (max-width: 1250px) {
 }
