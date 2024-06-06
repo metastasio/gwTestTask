@@ -10,33 +10,6 @@
 
   <body>
     <header class="header">
-      <nav class="main_navigation">
-        <ul>
-          <li>
-            <a href="#"
-              ><img src="img/лого 1.svg" alt="Логотип ТУЦ Сарафан"
-            /></a>
-          </li>
-          <li class="header_working_hours">
-            Режим работы: пн-вс 10:00-21:00 <br />
-            Лента 08:00-22:00
-          </li>
-          <li><a href="#">Контакты</a></li>
-          <li><a href="#">Карта ТЦ</a></li>
-          <li>
-            <form>
-              <label for="header_search" class="sr-only">Поиск </label
-              ><input
-                class="search"
-                id="header_search"
-                type="text"
-                placeholder="Найти магазин"
-              />
-            </form>
-          </li>
-          <li><button class="burger_menu_button"></button></li>
-        </ul>
-      </nav>
       <div class="drop_down_menu">
         <div class="drop_down_menu_wrapper">
           <div class="main_links">
@@ -109,6 +82,33 @@
           </div>
         </div>
       </div>
+      <nav class="main_navigation">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="img/лого 1.svg" alt="Логотип ТУЦ Сарафан"
+            /></a>
+          </li>
+          <li class="header_working_hours">
+            Режим работы: пн-вс 10:00-21:00 <br />
+            Лента 08:00-22:00
+          </li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Карта ТЦ</a></li>
+          <li>
+            <form>
+              <label for="header_search" class="sr-only">Поиск </label
+              ><input
+                class="search"
+                id="header_search"
+                type="text"
+                placeholder="Найти магазин"
+              />
+            </form>
+          </li>
+          <li><button class="burger_menu_button"></button></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -174,16 +174,27 @@
         </h2>
         <div class="rent_description_wrapper">
           <div class="rent_description_brands">
-            <div class="rent_description_brands_slider">
-              <img
-                src="img/Logotip-fioletovyj-png-1-2048x1024 1.png"
-                alt="Логотип Familia"
-              /><img src="img/Letual-logo 1.png" alt="Логотип Л'Этуаль" /><img
-                src="img/lenta_logo_hor_col_blu_rgb 1.png"
-                alt="Логотип Лента"
-              />
+            <div class="rent_description_brands_slider_wrapper">
+              <div class="rent_description_brands_slider">
+                <img
+                  class="slider_img"
+                  src="img/Logotip-fioletovyj-png-1-2048x1024 1.png"
+                  alt="Логотип Familia"
+                /><img
+                  class="slider_img"
+                  src="img/Letual-logo 1.png"
+                  alt="Логотип Л'Этуаль"
+                /><img
+                  class="slider_img"
+                  src="img/lenta_logo_hor_col_blu_rgb 1.png"
+                  alt="Логотип Лента"
+                />
+              </div>
+              <div class="rent_brands_slider_buttons">
+                <button class="rent_brands_slider_left_arrow"></button>
+                <button class="rent_brands_slider_right_arrow"></button>
+              </div>
             </div>
-
             <div class="rent_description_brands_list">
               <ul>
                 <li>
@@ -213,7 +224,7 @@
           </div>
 
           <div class="rent_description_details">
-            <dl>
+            <dl class="rent_description_details_list">
               <dt>Общая площадь торгового центра</dt>
               <dd>25 816 м <sup> 2</sup></dd>
 
@@ -227,22 +238,27 @@
               <dd>100 000 чел</dd>
             </dl>
             <img
+              class="img1"
               src="img/Rectangle 39.webp"
               alt="Фото ТУЦ Сарафан и бутиков внутри"
             />
             <img
+              class="img2"
               src="img/Rectangle 40.webp"
               alt="Фото ТУЦ Сарафан и бутиков внутри"
             />
             <img
+              class="img3"
               src="img/Rectangle 32.webp"
               alt="Фото ТУЦ Сарафан и бутиков внутри"
             />
             <img
+              class="img4"
               src="img/Rectangle 33.webp"
               alt="Фото ТУЦ Сарафан и бутиков внутри"
             />
             <img
+              class="img5"
               src="img/Rectangle 35.webp"
               alt="Фото ТУЦ Сарафан и бутиков внутри"
             />

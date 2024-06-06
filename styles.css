@@ -34,12 +34,15 @@ body {
     max-width: 100%;
     box-shadow: 0 5px 15px var(--light-gray);
     position: relative;
+    isolation: isolate;
   }
 
   .main_navigation {
     padding: 8px 80px;
     max-width: 1920px;
     margin: 0 auto;
+    /* z-index: 2; */
+    /* position: relative; */
   }
   .main_navigation ul {
     margin: 0;
@@ -187,14 +190,9 @@ main {
   .rent_description {
     margin: 80px 0 90px;
     width: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(12, auto);
-    gap: 30px;
   }
 
   .rent_description_title {
-    grid-column: 1/13;
     font-size: 48px;
     font-weight: bold;
     margin: 0;
@@ -202,16 +200,89 @@ main {
     line-height: 60px;
   }
 
-  .rent_description_wrapper,
   .rent_description_brands {
+    padding: 24px 0 80px;
+    display: grid;
+    grid-template-columns: repeat(12, auto);
     grid-column: 1/13;
-
+    gap: 30px;
   }
+  .rent_description_brands_slider_wrapper {
+    grid-column: span 7;
+  }
+
   .rent_description_brands_slider {
-    grid-column: 1/8;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 46px;
+    align-items: flex-start;
+  }
+
+  .rent_description_brands_slider img {
+    max-width: 30%;
   }
   .rent_description_brands_list {
-    grid-column: 8/13;
+    grid-column: span 5;
+  }
+
+  .rent_description_brands_list ul li + li {
+    padding-top: 14px;
+  }
+
+  .rent_description_brands_list ul li::marker {
+    color: var(--accent);
+    font-size: 16px;
+  }
+
+  .rent_description_details {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 60px 30px;
+  }
+
+  .rent_description_details_list {
+    grid-column: span 2;
+    grid-row: 1/2;
+    margin: 0;
+    padding: 0;
+    padding-top: 24px;
+    max-width: 190px;
+  }
+
+  .rent_description_details_list dd {
+    margin: 0;
+    padding: 0 0 36px;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  .rent_description_details .img1 {
+    grid-column: span 4;
+    grid-row: 1/2;
+    max-width: 100%;
+  }
+
+  .rent_description_details .img2 {
+    grid-column: span 6;
+    grid-row: 1/2;
+    max-width: 100%;
+  }
+  .rent_description_details .img3 {
+    grid-column: span 3;
+    grid-row: 2/3;
+    max-width: 100%;
+  }
+  .rent_description_details .img4 {
+    grid-column: span 4;
+    grid-row: 2/3;
+    max-width: 100%;
+  }
+  .rent_description_details .img5 {
+    grid-column: span 5;
+    grid-row: 2/3;
+    max-width: 100%;
   }
   /* .rent_description_title {
     font-size: 48px;
@@ -419,17 +490,15 @@ main {
   background-color: var(--background);
   max-width: 1920px;
   margin: 0 auto;
-  min-height: 450px;
+
   padding: 0;
   padding-bottom: 20px;
   position: absolute;
-  top: -450px;
+  top: 100px;
   left: 0;
   right: 0;
-  transition: 0.3s ease;
 
-  display: flex;
-  flex-flow: row nowrap;
+  display: none;
 }
 
 .main_links {
@@ -465,7 +534,8 @@ main {
 }
 
 .drop_down_menu.active {
-  top: 100px;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .drop_down_menu_wrapper {
