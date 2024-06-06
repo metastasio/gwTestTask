@@ -34,6 +34,7 @@ body {
     max-height: 100px;
     max-width: 100%;
     box-shadow: 0 5px 15px var(--light-gray);
+    position: relative;
   }
 
   .main_navigation {
@@ -411,4 +412,45 @@ main {
 
 /* 1390 footer gap 50*/
 @media (max-width: 1250px) {
+}
+
+.off_screen_menu {
+  background-color: var(--background);
+  width: 100%;
+  height: 450px;
+  padding: 0;
+  position: absolute;
+  top: -450px;
+  transition: 0.3s ease;
+
+  border: 1px solid red;
+}
+
+.main_links {
+  max-width: 230px;
+  padding: 20px 0 20px 80px;
+  border-right: 1px solid var(--gray);
+}
+
+.main_links ul {
+  font-size: 20px;
+}
+
+.main_links li + li {
+  padding-top: 27px;
+}
+
+.other_links h2 {
+  font-size
+
+}
+
+.off_screen_menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.off_screen_menu.active {
+  top: 100px;
 }
