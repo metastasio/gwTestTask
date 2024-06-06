@@ -117,7 +117,6 @@ main {
     max-width: 60%;
   }
   .about_img img {
-    height: auto;
     max-height: 640px;
     max-width: 100%;
     display: block;
@@ -188,9 +187,33 @@ main {
   .rent_description {
     margin: 80px 0 90px;
     width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    gap: 30px;
   }
 
   .rent_description_title {
+    grid-column: 1/13;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+  }
+
+  .rent_description_wrapper,
+  .rent_description_brands {
+    grid-column: 1/13;
+
+  }
+  .rent_description_brands_slider {
+    grid-column: 1/8;
+  }
+  .rent_description_brands_list {
+    grid-column: 8/13;
+  }
+  /* .rent_description_title {
     font-size: 48px;
     font-weight: bold;
     margin: 0;
@@ -205,23 +228,22 @@ main {
   .rent_description_brands {
     margin-bottom: 80px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
   }
 
   .rent_description_brands_slider {
-    max-width: 55%;
-  }
-  .rent_description_brands_slider img {
-    max-width: 33%;
-    max-height: 152px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 46px;
+    align-items: flex-start;
   }
 
-  .rent_description_brands_slider img + img {
-    padding-left: 46px;
+  .rent_description_brands_slider img {
+    max-width: 30%;
+
   }
 
   .rent_description_brands_list {
-    max-width: 45%;
     padding-left: 30px;
   }
 
@@ -233,46 +255,6 @@ main {
     color: var(--accent);
     font-size: 16px;
   }
-  /* .rent_description_brands {
-    gap: 30px;
-    margin-bottom: 80px;
-    display: grid;
-    grid-template-columns: repeat (5, auto);
-    width: 100%;
-  }
-
-  .rent_description_slider {
-    grid-column: 1/4;
-    grid-row: 1/2;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    gap: 30px;
-    max-height: 152px;
-  }
-
-  .rent_description_slider img {
-    width: 30%;
-
-    object-fit: contain;
-  }
-
-  .rent_description_brands_list {
-    grid-column: 4/6;
-    grid-row: 1/2;
-    padding: 0 0 0 -5px;
-    margin: 0;
-  }
-
-  .rent_description_brands_list li + li {
-    padding-top: 14px;
-  }
-
-  .rent_description_brands_list li::marker {
-    color: var(--accent);
-    font-size: 16px;
-  } */
 
   .rent_description_details dl {
     margin: 0;
@@ -305,7 +287,7 @@ main {
   .rent_description_details img:nth-of-type(4),
   .rent_description_details img:nth-of-type(5) {
     max-height: 360px;
-  }
+  } */
 
   /* .rent_description_details img {
     max-width: 862px;
